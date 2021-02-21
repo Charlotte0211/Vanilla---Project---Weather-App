@@ -5,6 +5,7 @@
             integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <title>Weather app</title>
     <link rel="stylesheet" href="src/style.css"/>
   </head>
@@ -13,25 +14,23 @@
         <div class="weather-app-wrapper">
       <div class="weather-app">
         <div class="overview">
-    <h1>New York</h1>
+    <h1 id="city"></h1>
     <ul>
-      <li>
-        Sunday 08:00
+      <li id="date">
       </li>
-      <li>
-        Clear
+      <li id="description">
       </li>
     </ul>
     </div>
     <div class ="row">
       <div class="col-6">
         <div class="clearfix weather-temperature">
-        <img src= "https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
-        alt="Clear"
+        <img src= ""
+        id="icon"
         class="float-left"
         />
         <div class="float-left">
-        <strong>12</strong
+        <strong id="temperature"></strong
           ><span class="units">˚C|<a href="#">˚F</a>
           </span>
       </div>
@@ -39,14 +38,9 @@
     </div>
       <div class ="col-6">
         <ul>
-          <li>
-            Precipitation : 0%
-          </li>
-            <li>
-              Humidity : 63%
+            <li>Humidity: <span id="humidity"></span> %
             </li>
-              <li>
-                Wind : 17mph
+              <li>Wind: <span id="wind"></span> km/h
               </li>
             </ul>
       </div>

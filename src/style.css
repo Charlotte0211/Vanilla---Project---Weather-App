@@ -94,4 +94,6 @@ li:first-letter {
   font-size: 13px;
   font-weight: 400;
   height: auto;
+  line-height: 15px;
+  white-space: nowrap;
 }

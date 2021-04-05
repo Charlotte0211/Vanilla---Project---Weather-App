@@ -46,27 +46,31 @@ function displayTemperature(response) {
   iconElement.setAttribute('alt', response.data.weather[0].description);
 }
 
-function displayForecast(response) {
+function displayForecast() {
   let forecastElement = document.querySelector('#forecast');
-  let forecast = response.data.list[0];
-  console.log(response.data);
 
-  forecastElement.innerHTML = `
-    <div class="col-2">
-      <h3>
-      12:00
-      </h3>
-      <img
-        src="https://ssl.gstatic.com/onebox/weather/48/rain_s_cloudy.png"
-        alt=""
-      />
-      <div class="weather-forecast-temperature">
-        <strong>${Math.round(
-          forecast.data.main.temp_max
-        )}°</strong>${Math.round(forecast.data.main.temp_min)}°
-      </div>
-    </div>
-`;
+  let forecastHTML = `<div class="row">`;
+  let days = ['Mon', 'Tues', 'Wed'];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+  <div class="col-2">
+  <div class="weather-forecast-date">${day}</div>
+  <img
+  src="https://ssl.gstatic.com/onebox/weather/48/rain_s_cloudy.png"
+  alt=""
+  width="42"
+  />
+  <div class="weather-forecast-temperatures>
+  <span class="weather-forecast-temperature-max>18°</span>
+  <span class="weather-forecast-temperature-min12°</span>
+  </div>
+  </div>
+  `;
+  });
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
 }
 
 function search(city) {
@@ -102,8 +106,6 @@ function displayCelsiusTemperature(event) {
   temperatureElement.innerHTML = Math.round(celsiusTemperature);
 }
 
-search('Edinburgh');
-
 let celsiusTemperature = null;
 
 let form = document.querySelector('#search-form');
@@ -114,3 +116,6 @@ fahrenheitLink.addEventListener('click', displayFahrenheitTemperature);
 
 let celsiusLink = document.querySelector('#celsius-link');
 celsiusLink.addEventListener('click', displayCelsiusTemperature);
+
+search('Edinburgh');
+displayForecast();

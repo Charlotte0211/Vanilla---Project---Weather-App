@@ -67,12 +67,22 @@ li:first-letter {
   text-decoration: none;
 }
 
-.weather-forecast-temperature {
+.weather-forecast {
+  margin-top: 20px;
   text-align: center;
-  color: rgb(33, 33, 33);
+  color: #000;
+}
+
+.weather-forecast-date {
+  font-size: 16px;
+  opacity: 0.5;
+}
+
+.weather-forecast-temperatures {
   font-size: 13px;
-  font-weight: 400;
-  height: auto;
-  line-height: 15px;
-  white-space: nowrap;
+  color:color: #000;
+}
+
+.weather-forecast-temperature-min {
+  opacity: 0.5;
 }

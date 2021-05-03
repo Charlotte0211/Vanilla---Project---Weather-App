@@ -1,5 +1,6 @@
 body {
   font-family: arial, sans-serif;
+  background-color: #ebf0f6;
 }
 
 h1 {
@@ -27,14 +28,23 @@ li:first-letter {
   text-transform: capitalize;
 }
 
+.btn-primary, 
+.btn-primary:hover, 
+.btn-primary:visited {
+    background-color: #f492bd!important;
+    border-radius: 20px!important;
+    border-color:#f492bd!important;
+}
+
 .weather-app-wrapper {
   max-width: 600px;
   margin: 30px auto;
 }
 .weather-app {
-  padding: 20px;
-  border: 1px solid #dadde1;
-  border-radius: 5px;
+  background-color: #FFF;
+  padding: 30px;
+  border-radius: 50px;
+  box-shadow: 9px 9px 24px 6px #13223811;
 }
 
 .overview {
@@ -85,4 +95,8 @@ li:first-letter {
 
 .weather-forecast-temperature-min {
   opacity: 0.5;
+}
+
+.open-source {
+text-align: center; 
 }

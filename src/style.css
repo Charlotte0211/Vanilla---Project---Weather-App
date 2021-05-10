@@ -1,6 +1,9 @@
 body {
   font-family: arial, sans-serif;
-  background-color: #ebf0f6;
+  background: url(/Users/charlotte.rivierehotmail.comriviere/Desktop/Vanilla---Project---Weather-App/src/Fleur.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
 }
 
 h1 {
